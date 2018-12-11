@@ -1,4 +1,3 @@
-require 'pry'
 # your code goes here
 def begins_with_r(array)
 	array.each.all? { |a| a.start_with?('r') }
