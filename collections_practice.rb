@@ -44,6 +44,10 @@ def organize_schools(schools)
   schools.each do |schools, locations|
     locations.each do |location, city|
       new_hash[city] = []
+    end
+  end
+  schools.each do |schools, locations|
+    locations.each do |location, city|
       new_hash[city] << schools
     end
   end
