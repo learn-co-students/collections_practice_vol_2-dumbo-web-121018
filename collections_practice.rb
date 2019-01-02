@@ -34,7 +34,6 @@ end
 def organize_schools(hash)
 	school_by_loc = {}
 	hash.map { |a, b| school_by_loc[b[:location]] = [] }
-	binding.pry
 	school_by_loc.each { |a, b| hash.each { |c, d| if a == d[:location] then b << c end } }
 
 end	
