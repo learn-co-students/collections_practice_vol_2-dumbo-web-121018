@@ -16,9 +16,9 @@ def remove_non_strings(array)
 	array.keep_if { |a| (a.is_a? String) }
 end
 
-def count_elements(array)
+def count_elements(hash)
 	# create counting hash
-	  array.each_with_object(Hash.new(0)) { |a, b| b[a[:name]] += 1 }.map { |name, count| {:name => name, :count => count } }
+	  hash.each_with_object(Hash.new(0)) { |a, b| b[a[:name]] += 1 }.map { |name, count| {:name => name, :count => count } }
 end
 
 def merge_data(arr1, arr2)
@@ -35,5 +35,4 @@ def organize_schools(hash)
 	school_by_loc = {}
 	hash.map { |a, b| school_by_loc[b[:location]] = [] }
 	school_by_loc.each { |a, b| hash.each { |c, d| if a == d[:location] then b << c end } }
-
 end	
